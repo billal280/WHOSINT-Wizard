@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WHOSINT Wizard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>WHOSINT Wizard</h1>
+    <form action="/run" method="post">
+        <button type="submit">Lancer une analyse !</button>
+    </form>
+
+    {% if output %}
+        <h3>Résultat :</h3>
+        <pre>{{ output }}</pre>
+    {% endif %}
+</body>
+</html>
